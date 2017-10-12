@@ -1,0 +1,36 @@
+@startuml
+[*] --> searchBar : query text = 'in n out'
+searchBar --> searchDB : listen to event "typing"
+searchBar -> searchResults : hitting enter 
+searchDB --> searchBar : return query results
+searchResults --> found
+searchResults -> notFound
+
+found : return 200
+found : display search results
+
+notFound : return 200
+notFound : display empty search result message
+
+state searchBar {
+
+	[*] --> searchResultList : if text_field !== ""
+	[*] --> hideSearchResultList : text_field === ""
+
+	searchResultList : Display current list of results
+	hideSearchResultList : Hide list when there is no text in the search bar
+}
+
+state search {
+	[*] --> query
+
+	query : compose query string
+	query : perform sanitization on user input
+
+	query --> solr : pass sanitized query string to solr 
+
+	solr : text = 'in + n + out'
+	solr : return query results
+}
+
+@enduml
