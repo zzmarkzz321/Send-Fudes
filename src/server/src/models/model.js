@@ -10,4 +10,12 @@ const postSchema = new Schema({
     dateAdded: { type: 'Date', default: Date.now, required: true },
 });
 
+const userProfile = new Schema({
+    name: { type: 'String', required: true},
+    email: { type: 'VarChar', required: true},
+    dateOfBirth:{ type: 'Date', default: Date.now, required: true},
+    gender: {type: 'Char', required: true},
+    password: {type: 'VarChar', required: true},
+});
+
 export default mongoose.model('Post', postSchema);
