@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
+let schemas;
 
 const postSchema = new Schema({
     name: { type: 'String', required: true },
@@ -10,14 +11,17 @@ const postSchema = new Schema({
     dateAdded: { type: 'Date', default: Date.now, required: true },
 });
 
-const userProfile = new Schema({
+const user = new Schema({
+    cuid: { type: 'String', required: true},
     name: { type: 'String', required: true},
     username: { type: 'String', required: true},
     email: { type: 'String', required: true},
-    dob:{ type: 'Date', default: Date.now, required: true},
+    dob: { type: 'Date', required: true},
     gender: {type: 'String', required: true},
-    phoneNumber: {type: 'Number', required: true},
+    telephone: {type: 'Number', required: true},
     password: {type: 'String', required: true},
 });
 
-export default mongoose.model('Post', postSchema);
+export schemas = [
+    user,
+];
