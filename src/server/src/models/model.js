@@ -31,15 +31,21 @@ const transactions = new Schema({
 
 });
 
+/**
+ *
+ * @type {mongoose.Schema}
+ */
 const activities = new Schema({
-
+    restaurant: { type: 'String', required: false},
+    cuisine: { type: 'Mixed', required: false},
 });
 
 const vendors = new Schema({
+    name: { type: 'String', required: true},
 
 });
 
-const messageLogs = new Schema({
+const messageLogs = new Schema({r
 
 });
 
