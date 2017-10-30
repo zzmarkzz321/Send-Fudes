@@ -1,18 +1,23 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: './src/client/src/index.html',
+    filename: 'index.html',
+    inject: 'body'
+})
+
 module.exports = {
-    entry: {
-        app: [
-            '.src/client/server.js'
-        ],
-        vendor: [
-            'react',
-            'react-dom'
+    entry: './src/client/src/App',
+    output: {
+        path: path.resolve('dist'),
+        filename: 'bundle.js'
+    },
+    module: {
+        loaders: [
+            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
         ]
     },
-    output: {
-        path: __dirname,
-        filename: 'app.js',
-        publicPath: 'http://0.0.0.0:8000/',
-    }
+    plugins: [HtmlWebpackPluginConfig]
 };
