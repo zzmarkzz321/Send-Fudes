@@ -9,7 +9,7 @@
 
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/search.controller');
+const controller = require('./controller');
 
 router.get('/', controller.query);
 

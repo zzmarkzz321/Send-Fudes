@@ -4,10 +4,10 @@
 const Express = require('Express');
 const app = new Express();
 
-// connect the routes from the search.js file
-const search = require('./src/routes/search.js');
+// connect the routes from the index.js file
+const search = require('./routes/search');
 
-// Uses the routing from the search.js file
+// Uses the routing from the index.js file
 app.use('/search/', search);
 
 app.listen(3000);
