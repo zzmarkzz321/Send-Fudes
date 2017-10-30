@@ -41,5 +41,4 @@ export schemas = [
     transactions,
     activities,
     vendors,
-    messageLogs,
 ];
