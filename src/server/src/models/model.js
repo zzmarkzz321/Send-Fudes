@@ -45,7 +45,7 @@ const vendors = new Schema({
 
 });
 
-const messageLogs = new Schema({r
+const messageLogs = new Schema({
 
 });
 
