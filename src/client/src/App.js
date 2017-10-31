@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { About, Home } from './components/';
+import { About, Home, Example } from './components';
 
 export default class App extends Component {
     render() {
@@ -9,6 +9,8 @@ export default class App extends Component {
 
                 <Home />
                 <About />
+
+                <Example/>
             </div>
         );
     }
