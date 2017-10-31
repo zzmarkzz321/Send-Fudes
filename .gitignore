@@ -60,3 +60,5 @@ typings/
 
 # intelliJ folders
 .idea
+
+.idea/workspace.xml
