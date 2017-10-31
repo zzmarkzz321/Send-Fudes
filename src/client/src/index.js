@@ -2,7 +2,9 @@
     ./client/index.js
 */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import { render } from 'react-dom';
+import App from './App.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render (
+    <App name="mark" />, document.getElementById('root')
+);

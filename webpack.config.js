@@ -5,13 +5,13 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './src/client/src/index.html',
     filename: 'index.html',
     inject: 'body'
-})
+});
 
 module.exports = {
-    entry: './src/client/src/App',
+    entry: './src/client/src/index.js',
     output: {
-        path: path.resolve('dist'),
-        filename: 'bundle.js'
+        path: path.resolve("./build"),
+        filename: "bundle.js"
     },
     module: {
         loaders: [
