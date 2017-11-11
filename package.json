@@ -34,6 +34,7 @@
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "sanitize-html": "^1.11.4",
+    "semantic-ui-react": "^0.75.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },
