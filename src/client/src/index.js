@@ -1,10 +1,14 @@
 /*
     ./client/index.js
 */
-import React from 'react';
-import { render } from 'react-dom';
-import App from './App.js';
+import React from 'react'
+import { render } from 'react-dom'
+
+import App from './components/App'
+
+// TODO Include Scss here
 
 render (
-    <App name="mark" />, document.getElementById('root')
+    <App/>,
+    document.getElementById('root')
 );
