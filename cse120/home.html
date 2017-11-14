@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <style type="text/css">
+        body {
+            background-color: ghostwhite;
+        }
+        .Header {
+            margin: 0px 30%;
+            margin-top: 10%;
+            text-align: center;
+        }
+        h1 {
+            color: #EA1D64;
+        }
+        .Verification {
+            margin: 0px 10%;
+            margin-top: 2.5%;
+        }
+        .ui.button {
+            background-color: #EA1D64;
+            color: white;
+            margin: 0px 35%;
+            display: block;
+            margin: auto;
+            margin-top: 0%;
+            width: 100%;
+        }
+        .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+    .ui.icon.input {
+      width: 60%;
+    }
+    </style>
+</head>
+<body>
+<!-- ////////////////////////////////////////////// -->
+    <div class="ui vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="left item">
+            <i class="food icon"></i>
+        </div>
+        <div class="right item">
+            <a href="board.html" class="item">Bounty</a>
+            <a class="item">Explore</a>
+            <a class="item">Blog</a>
+            <a href="login.html" class="ui button">Log in</a>
+        </div>
+      </div>
+    </div>
+<div class = "Header">
+    <h1>Send-Fudes now 👊</h1>
+</div>
+<div class = "Verification">
+    <div class="ui category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="ex: taco bell, in-n-out, applebees....">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  var content = [
+    {
+      title: 'Horse',
+      description: 'An Animal',
+    },
+    {
+      title: 'Cow',
+      description: 'Another Animal',
+    }
+  ]
+;
+console.log('hard');
+$('.ui.category.search')
+  .search({
+    source : content,
+    searchFields   : [
+      'title'
+    ],
+    searchFullText: false,
+    results: 'results'
+  })
+;
+</script>
+</body>
+</html>

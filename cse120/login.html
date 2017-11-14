@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+    <style type="text/css">
+        body {
+            background-color: ghostwhite;
+        }
+        .LogIn {
+            margin: 0px 30%;
+        }
+        .ui.button {
+            background-color: #EA1D64;
+            color: white;
+        }
+        h1 {
+            color: #EA1D64;
+            font-weight: 900;
+            text-align: center;
+            padding-top: 10%;
+            display: block;
+        }
+
+        .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- ////////////////////////////////////////////// -->
+    <div class="ui vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="left item">
+            <a href="home.html"><i class="food icon"></i></a>
+        </div>
+        <div class="right item">
+            <a href="board.html" class="item">Bounty</a>
+            <a class="item">Explore</a>
+            <a class="item">Blog</a>
+            <a href="login.html" class="ui button">Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <header>
+        <h1>Send-Fudes</h1>
+    </header>
+    <div class = "LogIn">
+        <form class="ui form">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="first-name" placeholder="Enter UCMid">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="last-name" placeholder="Enter password......">
+            </div>
+            <a href="forgot.html">Forgot Password?</a>
+            <br><br>
+            <button class="ui button" type="submit">Submit 👅</button>
+            <br>
+            <p>New to SendFudes?<a href="register.html"> Sign-Up!</a></p>
+
+        </form>
+    </div>
+</body>
+</html>
