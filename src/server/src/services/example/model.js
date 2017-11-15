@@ -19,6 +19,22 @@ const postSchema = new Schema({
     dateAdded: { type: 'Date', default: Date.now, required: true },
 });
 
+/**
+ * Metadata includes miscellaneous items such as compliments, rating, etc.
+ * @type {mongoose.Schema}
+ */
+const user = new Schema({
+    cuid: { type: 'String', required: true},
+    name: { type: 'String', required: true},
+    username: { type: 'String', required: true},
+    email: { type: 'String', required: true},
+    dob: { type: 'Date', required: true},
+    gender: {type: 'String', required: true},
+    telephone: {type: 'Number', required: true},
+    password: {type: 'String', required: true},
+    miscellaneous: {type: 'Mixed', required: false}
+});
+
 const transactions = new Schema({
 
 });
@@ -41,4 +57,5 @@ export schemas = [
     transactions,
     activities,
     vendors,
+    user
 ];
