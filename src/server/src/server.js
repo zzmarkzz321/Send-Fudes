@@ -11,7 +11,7 @@ const search = require('./routes/search');
 
 // Default routes
 app.get('/', (req, res) => {
-    res.send('Hello');
+    res.send('home');
 });
 
 app.get('/about', (req, res) => {
