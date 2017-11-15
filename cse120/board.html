@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bounty Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+    <style type="text/css">
+        h1{
+            text-align: center;
+            color: #EA1D64;
+            padding-top: 5%;
+        }
+        h3 {
+            text-align: center;
+            color: #EA1D64;
+        }
+        body {
+            background-color: ghostwhite;
+        }
+        .item {
+            text-align: center;
+        }
+        .test {
+            text-align: center;
+            width: 55%;
+        }
+        #board {
+            margin-top: 10%;
+        }
+        div{
+            display: block;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            border: 1px #EA1D64;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #EA1D64;
+            color: white;
+        }
+        .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+    </style>
+</head>
+<body>
+<!-- ////////////////////////////////////////////// -->
+    <div class="ui vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="left item">
+            <a href="home.html"><i class="food icon"></i></a>
+        </div>
+        <div class="right item">
+            <a href="board.html" class="item">Bounty</a>
+            <a class="item">Explore</a>
+            <a class="item">Blog</a>
+            <a href="login.html" class="ui button">Log in</a>
+        </div>
+      </div>
+    </div>
+<h1>Bounty Board</h1>
+<h3 style="margin-top: 5%">Nearby Check Ins</h3>
+<div class="test">
+    <div class="ui horizontal list">
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <div class="header">Daniel Leung</div>
+                Checking in at Starbucks
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <div class="header">Mark Santiago</div>
+                Checking in at J&R Tacos
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <div class="header">Roman Wong</div>
+                Checking in at In n Out
+            </div>
+        </div>
+    </div>
+    <h3>Requesting Fudes near you</h3>
+    <div class="ui horizontal list">
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <div class="header">Wyatt Chen</div>
+                Requesting Jack in the Box
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <div class="header">Johnny</div>
+                Requesting Sushi Cuisine
+            </div>
+        </div>
+        <div class="item">
+            <i class="fork icon"></i>
+            <div class="content">
+                <div class="header">Joe Johnson</div>
+                Requesting Donut Shop
+            </div>
+        </div>
+    </div>
+    <div id="board" class="ui pointing menu">
+        <a class="active item">
+            Check Ins
+        </a>
+        <a class="item">
+            Requests
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent icon input">
+                    <input placeholder="Search..." type="text">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table style="margin-bottom: 5%">
+        <tr>
+            <th>Name</th>
+            <th>Restaurant</th>
+            <th>Time since Posted</th>
+        </tr>
+        <tr>
+            <td>Wyatt Chen</td>
+            <td>Jack in the Box</td>
+            <td>Just posted</td>
+        </tr>
+        <tr>
+            <td>Johnny</td>
+            <td>Sushi Cuisine</td>
+            <td>Just posted</td>
+        </tr>
+        <tr>
+            <td>Joe Johnson</td>
+            <td>Donut Shop</td>
+            <td>5 Minutes</td>
+        </tr>
+        <tr>
+            <td>Stephen Curry</td>
+            <td>Taste of Little India</td>
+            <td>5 Minutes</td>
+        </tr>
+        <tr>
+            <td>Alfred Alfredo</td>
+            <td>Olive Garden</td>
+            <td>10 minutes</td>
+        </tr>
+        <tr>
+            <td>Ronaldo McDonald</td>
+            <td>McDonald's</td>
+            <td>15 minutes</td>
+        </tr>
+        <tr>
+            <td>Jack Jackson</td>
+            <td>Jack in the Box</td>
+            <td>15 minutes</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
+    "api": "nodemon ./src/server/src/server.js",
     "dev": "webpack-dev-server"
   },
   "repository": {
