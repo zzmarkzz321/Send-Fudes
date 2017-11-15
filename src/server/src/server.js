@@ -5,7 +5,7 @@ const Express = require('Express');
 const app = new Express();
 const serverConfig = require('../../../config');
 
-// connect the routes from the index.js file
+// connect the routes from the model.js file
 // TODO: include your routes here
 const search = require('./routes/search');
 
@@ -22,7 +22,7 @@ app.get('/contact', (req, res) => {
     res.send('contact page');
 });
 
-// Uses the routing from the index.js file
+// Uses the routing from the model.js file
 // TODO: make sure the app uses your route
 app.use('/search/', search);
 

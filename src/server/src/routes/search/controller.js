@@ -3,7 +3,7 @@
 let controller = {};
 
 controller.query = (req, res) => {
-    const SearchService = require('../../services/search');
+    const SearchService = require('../../services/search/index');
     return SearchService.prototype.query()
         .then((result) => {
             res.status(200).json({'response': 'Receiving response from search service: ', result});
