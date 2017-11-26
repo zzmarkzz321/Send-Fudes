@@ -8,7 +8,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-    entry: './src/client/src/model.js',
+    entry: './src/client/src/index.js',
     output: {
         path: path.resolve("./build"),
         filename: "bundle.js"
