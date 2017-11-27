@@ -8,7 +8,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-    entry: './src/client/src/model.js',
+    entry: './src/client/src/index.js',
     output: {
         path: path.resolve("./build"),
         filename: "bundle.js"
@@ -16,7 +16,8 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
         ]
     },
     plugins: [HtmlWebpackPluginConfig]

@@ -62,3 +62,9 @@ typings/
 .idea
 
 .idea/workspace.xml
+package-lock.json
+.DS_Store
+
+
+build/
+src/client/src/public/
