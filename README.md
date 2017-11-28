@@ -9,5 +9,5 @@ Software Engineering Project 2017
 
 3. Open two terminals and run the following in each:
 
-  1. yarn api 
-  2. yarn dev
+  - yarn api 
+  - yarn dev
