@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// import { Login } from 'pages/login';
 
 export default class App extends Component {
 
@@ -27,44 +27,27 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <div className="ui vertical masthead center aligned segment">
-
-                    <div className="ui container">
-                        <div className="ui large secondary pointing menu">
-                            <a className="toc item">
-                                <i className="sidebar icon"></i>
-                            </a>
-                            <div className="left item">
-                                <i className="food icon"></i>
-                            </div>
-                            <div className="right item">
-                                <a href="board.html" className="item">Bounty</a>
-                                <a className="item">Explore</a>
-                                <a className="item">Blog</a>
-                                <a href="login.html" className="ui button">Log in</a>
-                            </div>
+                <div className = "Header">
+                    <h1>Forgot your password? 😱</h1>
+                </div>
+                <div className = "Verification">
+                    <form className="ui form">
+                        <div className="field">
+                            <label>Confirm UC Merced E-Mail</label>
+                            <input type="text" name="email" placeholder="Enter UCMid..."/>
                         </div>
-                    </div>
 
-                    <div className = "Header">
-                        <h1>Send-Fudes now 👊</h1>
-                    </div>
+                        <br/><br/>
+                            <button className="ui button" type="submit">Send Verification Key! ✊🏻 </button>
+                            <br/>
 
-                    <div className = "Verification">
-                        <div className="ui category search">
-                            <div className="ui icon input">
-                                <form onSubmit={this.handleSubmit}>
-                                    <label>
-                                        <input type="text" value={this.state.search_value} onChange={this.handleChange} />
-                                    </label>
-                                    <input type="submit" value="Submit" />
-                                </form>
-                            </div>
-                            <div className="results"></div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        );
+            );
     }
 }
+
+
+
+
