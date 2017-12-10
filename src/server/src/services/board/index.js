@@ -16,6 +16,7 @@ Board.prototype.getSingleJob = (job_id) => {
         const resultJobDescription = {
             restaurant_name: 'in-n-out',
             rating: 4,
+            proximity: 4.5,
             location: 'blah blah 16th street, Merced',
             request: [
                 'double double',
@@ -28,14 +29,12 @@ Board.prototype.getSingleJob = (job_id) => {
         };
 
         // TODO If your database crap works
-        resolve(resultJobDescription);
+        if (resultJobDescription)
+            resolve(resultJobDescription);
 
         // TODO ELSE, you'll reject with an error
-        reject({'message': 'This shit doesnt work'});
+        else
+            reject({'message': 'This shit doesnt work'});
     });
 };
-
 module.exports = Board;
-
-
-
