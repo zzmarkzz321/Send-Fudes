@@ -21,8 +21,9 @@ export default class Login extends Component {
                         <br><br>
                             <button className="ui button" type="submit">Submit 👅</button>
                             <br>
-                                <p>New to SendFudes?<a href="register.html"> Sign-Up!</a></p>
-
+                                <p>New to SendFudes?
+                                    <a href="register.html"> Sign-Up!</a>
+                                </p>
                     </form>
                 </div>
             </div>

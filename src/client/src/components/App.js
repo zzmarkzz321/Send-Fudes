@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { About, Login } from './pages/';
 
 export default class App extends Component {
 
@@ -29,22 +30,28 @@ export default class App extends Component {
             <div>
                 <div className="ui vertical masthead center aligned segment">
 
-                    <div className="ui container">
-                        <div className="ui large secondary pointing menu">
-                            <a className="toc item">
-                                <i className="sidebar icon"></i>
-                            </a>
-                            <div className="left item">
-                                <i className="food icon"></i>
-                            </div>
-                            <div className="right item">
-                                <a href="board.html" className="item">Bounty</a>
-                                <a className="item">Explore</a>
-                                <a className="item">Blog</a>
-                                <a href="login.html" className="ui button">Log in</a>
+                    <BrowserRouter>
+                        <div className="ui container">
+                            <div className="ui large secondary pointing menu">
+                                <a className="toc item">
+                                    <i className="sidebar icon"></i>
+                                </a>
+                                <div className="left item">
+                                    <i className="food icon"></i>
+                                </div>
+                                <div className="right item">
+                                    <Link to="/about" className="item">About</Link>
+                                    <a className="item">Explore</a>
+                                    <a className="item">Blog</a>
+                                    <Link to="/login" className="ui button">Log in</Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                        <Route exact path="/" component={ App }/>
+                        <Route path="/about" component={ About }/>
+                        <Route path="/login" component={ Login }/>
+                    </BrowserRouter>
 
                     <div className = "Header">
                         <h1>Send-Fudes now 👊</h1>
@@ -63,6 +70,7 @@ export default class App extends Component {
                             <div className="results"></div>
                         </div>
                     </div>
+
                 </div>
             </div>
         );
