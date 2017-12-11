@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { About, Login } from './pages/';
 
+
 export default class App extends Component {
 
     constructor(props) {
@@ -53,9 +54,9 @@ export default class App extends Component {
                         <Route path="/login" component={ Login }/>
                     </BrowserRouter>
 
-                    <div className = "Header">
-                        <h1>Send-Fudes now 👊</h1>
-                    </div>
+                        <br/><br/>
+                            <button className="ui button" type="submit">Send Verification Key! ✊🏻 </button>
+                            <br/>
 
                     <div className = "Verification">
                         <div className="ui category search">
@@ -70,9 +71,12 @@ export default class App extends Component {
                             <div className="results"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        );
+            );
     }
 }
+
+
+
+
