@@ -1,15 +1,43 @@
 import React, { Component } from 'react';
 
-export default class Home extends Component {
+export class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            search_value: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({
+            search_value: event.target.value
+        });
+    }
+
+    handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.search_value);
+        event.preventDefault();
+    }
     render() {
         return (
-            <div>
-                <h1>Home Page</h1>
+            <div className="ui vertical masthead center aligned segment">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam architecto at exercitationem ipsa
-                    iste molestiae nobis odit! Error quo reprehenderit velit! Aperiam eius non odio optio, perspiciatis
-                    suscipit vel?</p>
-
+                <div className = "Verification">
+                    <div className="ui category search">
+                        <div className="ui icon input">
+                            <form onSubmit={this.handleSubmit}>
+                                <label>
+                                    <input type="text" value={this.state.search_value} onChange={this.handleChange} />
+                                </label>
+                                <input type="submit" value="Submit" />
+                            </form>
+                        </div>
+                        <div className="results"></div>
+                    </div>
+                </div>
             </div>
         );
     }

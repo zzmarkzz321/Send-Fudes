@@ -1,32 +1,25 @@
 import React, { Component } from 'react';
-import { Button, Container, Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
-const MenuList = () => (
-    <div>
-        <Menu fixed='top' size='large'>
-            <Container>
-                <Menu.Item as='a' href='#' active>Home</Menu.Item>
-                <Menu.Menu position='right'>
-                    <Menu.Item as='a' href='#'>Work</Menu.Item>
-                    <Menu.Item as='a' href='#'>Company</Menu.Item>
-                    <Menu.Item as='a' href='#'>Careers</Menu.Item>
-                    <Menu.Item>
-                        <Button as='a' href='#' primary>Login</Button>
-                    </Menu.Item>
-                </Menu.Menu>
-            </Container>
-        </Menu>
-    </div>
-);
-
-
-export class NavigationComponent extends Component {
-
+export class Navigation extends Component {
     render() {
         return (
-            <MenuList/>
-        );
+            <div className="ui container">
+                <div className="ui large secondary pointing menu">
+                    <a className="toc item">
+                        <i className="sidebar icon"></i>
+                    </a>
+                    <div className="left item">
+                        <Link to="/"><i className="food icon"></i></Link>
+                    </div>
+                    <div className="right item">
+                        <Link to="/about" className="item">About</Link>
+                        <a className="item">Explore</a>
+                        <a className="item">Blog</a>
+                        <Link to="/login" className="ui button">Log in</Link>
+                    </div>
+                </div>
+            </div>
+        )
     }
-}
-
-export const Navigation = NavigationComponent;
+};
