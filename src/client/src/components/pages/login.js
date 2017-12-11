@@ -17,6 +17,7 @@ export class Login extends Component {
                             <label>Password</label>
                             <input type="password" name="last-name" placeholder="Enter password......"/>
                         </div>
+
                         <a>Forgot Password?</a>
                         <br/><br/>
                         <button className="ui button" type="submit">Submit 👅</button>
