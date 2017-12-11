@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Login extends Component {
     render() {
@@ -18,11 +19,11 @@ export class Login extends Component {
                             <input type="password" name="last-name" placeholder="Enter password......"/>
                         </div>
 
-                        <a>Forgot Password?</a>
+                        <Link to="/forgot-password"><a>Forgot Password?</a></Link>
                         <br/><br/>
                         <button className="ui button" type="submit">Submit 👅</button>
                         <br/>
-                        <p>New to SendFudes?<a> Sign-Up!</a></p>
+                        <p>New to SendFudes? <Link to="register"><a> Sign-Up!</a></Link></p>
                         <br/>
                     </form>
                 </div>
