@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Container, Menu } from 'semantic-ui-react';
 
-const MenuList = () => (
+const Navigation = () => (
     <div>
         <Menu fixed='top' size='large'>
             <Container>
@@ -20,13 +20,4 @@ const MenuList = () => (
 );
 
 
-export class NavigationComponent extends Component {
-
-    render() {
-        return (
-            <MenuList/>
-        );
-    }
-}
-
-export const Navigation = NavigationComponent;
+export default Navigation;
