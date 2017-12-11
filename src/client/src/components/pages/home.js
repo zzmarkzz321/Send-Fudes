@@ -25,6 +25,10 @@ export class Home extends Component {
         return (
             <div className="ui vertical masthead center aligned segment">
 
+                <header className = "Header">
+                    <h1>Send-Fudes now 👊</h1>
+                </header>
+
                 <div className = "Verification">
                     <div className="ui category search">
                         <div className="ui icon input">

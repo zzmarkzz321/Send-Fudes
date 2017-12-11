@@ -10,7 +10,7 @@ export class Navigation extends Component {
                         <i className="sidebar icon"></i>
                     </a>
                     <div className="left item">
-                        <Link to="/"><i className="food icon"></i></Link>
+                        <Link to="/"><span>SendFudes</span></Link>
                     </div>
                     <div className="right item">
                         <Link to="/about" className="item">About</Link>
