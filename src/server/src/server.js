@@ -10,16 +10,11 @@ const serverConfig = require('../../../config');
 // TODO: include your routes here
 const search = require('./routes/search');
 
-// All API Endpoints
+// TODO: API Endpoints
 app.use('/search/', search);
 
-app.get('/login', function (req, res) {
-    res.set('Content-Type', 'application/json');
-    res.send('{"message":"Hello from the custom server!"}');
-});
-
+// TODO: THIS DOES NOT FUCKING WORK
 // All remaining requests return the React app, so it can handle routing.
-
 app.get('*', function(request, response) {
     response.sendFile(path.resolve(__dirname, '../../client/src/', 'index.html'));
 });
