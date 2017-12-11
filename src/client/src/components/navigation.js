@@ -1,32 +1,20 @@
 import React, { Component } from 'react';
-import { Button, Container, Menu } from 'semantic-ui-react';
 
-const MenuList = () => (
-    <div>
-        <Menu fixed='top' size='large'>
-            <Container>
-                <Menu.Item as='a' href='#' active>Home</Menu.Item>
-                <Menu.Menu position='right'>
-                    <Menu.Item as='a' href='#'>Work</Menu.Item>
-                    <Menu.Item as='a' href='#'>Company</Menu.Item>
-                    <Menu.Item as='a' href='#'>Careers</Menu.Item>
-                    <Menu.Item>
-                        <Button as='a' href='#' primary>Login</Button>
-                    </Menu.Item>
-                </Menu.Menu>
-            </Container>
-        </Menu>
+export const Navigation = () => (
+    <div className="ui container">
+        <div className="ui large secondary pointing menu">
+            <a className="toc item">
+                <i className="sidebar icon"></i>
+            </a>
+            <div className="left item">
+                <i className="food icon"></i>
+            </div>
+            <div className="right item">
+                <Link to="/about" className="item">About</Link>
+                <a className="item">Explore</a>
+                <a className="item">Blog</a>
+                <Link to="/login" className="ui button">Log in</Link>
+            </div>
+        </div>
     </div>
 );
-
-
-export class NavigationComponent extends Component {
-
-    render() {
-        return (
-            <MenuList/>
-        );
-    }
-}
-
-export const Navigation = NavigationComponent;
