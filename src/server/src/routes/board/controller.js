@@ -12,4 +12,14 @@ board.getSingleJob = (req, res) => {
         });
 };
 
+board.getMultipleJobs = (req, res) => {
+    const BoardService = require('../../services/board/index');
+    return BoardService.prototype.getMultipleJobs()
+        .then((result) => {
+            res.status(200).json(result);
+        }).catch((err) => {
+            res.status(500).json(err);
+        });
+};
+
 module.exports = board;
